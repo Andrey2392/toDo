@@ -4,23 +4,43 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller - Заметки-->
+        <!--Task List View Controller - Заметки-->
         <scene sceneID="NzO-XL-Knh">
             <objects>
-                <tableViewController id="go7-nz-Pjb" sceneMemberID="viewController">
+                <tableViewController id="go7-nz-Pjb" customClass="TaskListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HRl-DO-GH8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="LId-tk-v3g" style="IBUITableViewCellStyleDefault" id="sjw-9p-6jq">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="doneTaskCell" textLabel="tdx-e2-YYK" style="IBUITableViewCellStyleDefault" id="9dc-UH-0gg">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9dc-UH-0gg" id="t34-d6-xQ5">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tdx-e2-YYK">
+                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="19"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Ftl-ID-W3O" kind="push" id="0bN-ZC-F8b"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notDoneTaskCell" textLabel="LId-tk-v3g" style="IBUITableViewCellStyleDefault" id="sjw-9p-6jq">
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sjw-9p-6jq" id="SMZ-Wu-mcu">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Тестовая заметка" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LId-tk-v3g">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LId-tk-v3g">
                                             <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="19"/>
@@ -30,7 +50,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Ftl-ID-W3O" kind="push" id="Zny-W6-GJS"/>
+                                    <segue destination="Ftl-ID-W3O" kind="push" id="mrs-HF-lpx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -43,7 +63,7 @@
                     <navigationItem key="navigationItem" title="Заметки" id="GUI-pm-jQW">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="UMf-XN-Xh1">
                             <connections>
-                                <segue destination="IqZ-uu-ZFm" kind="modal" id="cfK-fV-Aw0"/>
+                                <segue destination="IqZ-uu-ZFm" kind="modal" identifier="AddTaskSegue" id="cfK-fV-Aw0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -120,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="1298" y="503"/>
         </scene>
-        <!--Table View Controller - Добавить заметку-->
+        <!--Add Task View Controller - Добавить заметку-->
         <scene sceneID="ajK-d5-p29">
             <objects>
-                <tableViewController id="gdy-1S-Anj" sceneMemberID="viewController">
+                <tableViewController id="gdy-1S-Anj" customClass="AddTaskViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="qPZ-Vh-9BL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,9 +176,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Добавить заметку" id="syS-8H-cSS">
-                        <barButtonItem key="leftBarButtonItem" title="отмена" id="ckZ-0z-Jje"/>
-                        <barButtonItem key="rightBarButtonItem" title="готово" id="LAO-v8-ZfL"/>
+                        <barButtonItem key="leftBarButtonItem" title="отмена" id="ckZ-0z-Jje">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="gdy-1S-Anj" id="BD0-ud-UDI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="готово" id="LAO-v8-ZfL">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="gdy-1S-Anj" id="HWi-zw-upX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="nameField" destination="Ndx-y6-LqN" id="dOY-c4-NB9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pw-MB-B8c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -206,4 +237,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="mrs-HF-lpx"/>
+    </inferredMetricsTieBreakers>
 </document>

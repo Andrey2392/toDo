@@ -22,6 +22,8 @@
 		55AB8A88183493B600CDA9C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55AB8A86183493B600CDA9C2 /* InfoPlist.strings */; };
 		55AB8A8A183493B600CDA9C2 /* toDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AB8A89183493B600CDA9C2 /* toDoTests.m */; };
 		55AB8A951834A48400CDA9C2 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AB8A941834A48400CDA9C2 /* Task.m */; };
+		55AB8A981834A90E00CDA9C2 /* TaskListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AB8A971834A90E00CDA9C2 /* TaskListViewController.m */; };
+		55AB8A9B1834BBA900CDA9C2 /* AddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AB8A9A1834BBA900CDA9C2 /* AddTaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		55AB8A89183493B600CDA9C2 /* toDoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = toDoTests.m; sourceTree = "<group>"; };
 		55AB8A931834A48400CDA9C2 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		55AB8A941834A48400CDA9C2 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		55AB8A961834A90E00CDA9C2 /* TaskListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskListViewController.h; sourceTree = "<group>"; };
+		55AB8A971834A90E00CDA9C2 /* TaskListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskListViewController.m; sourceTree = "<group>"; };
+		55AB8A991834BBA900CDA9C2 /* AddTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTaskViewController.h; sourceTree = "<group>"; };
+		55AB8A9A1834BBA900CDA9C2 /* AddTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTaskViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +130,10 @@
 				55AB8A65183493B600CDA9C2 /* Supporting Files */,
 				55AB8A931834A48400CDA9C2 /* Task.h */,
 				55AB8A941834A48400CDA9C2 /* Task.m */,
+				55AB8A961834A90E00CDA9C2 /* TaskListViewController.h */,
+				55AB8A971834A90E00CDA9C2 /* TaskListViewController.m */,
+				55AB8A991834BBA900CDA9C2 /* AddTaskViewController.h */,
+				55AB8A9A1834BBA900CDA9C2 /* AddTaskViewController.m */,
 			);
 			path = toDo;
 			sourceTree = "<group>";
@@ -255,8 +265,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				55AB8A951834A48400CDA9C2 /* Task.m in Sources */,
+				55AB8A9B1834BBA900CDA9C2 /* AddTaskViewController.m in Sources */,
 				55AB8A75183493B600CDA9C2 /* ViewController.m in Sources */,
 				55AB8A6F183493B600CDA9C2 /* AppDelegate.m in Sources */,
+				55AB8A981834A90E00CDA9C2 /* TaskListViewController.m in Sources */,
 				55AB8A6B183493B600CDA9C2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
