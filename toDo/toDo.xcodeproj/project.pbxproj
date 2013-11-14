@@ -21,6 +21,7 @@
 		55AB8A80183493B600CDA9C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AB8A62183493B600CDA9C2 /* UIKit.framework */; };
 		55AB8A88183493B600CDA9C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55AB8A86183493B600CDA9C2 /* InfoPlist.strings */; };
 		55AB8A8A183493B600CDA9C2 /* toDoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AB8A89183493B600CDA9C2 /* toDoTests.m */; };
+		55AB8A951834A48400CDA9C2 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 55AB8A941834A48400CDA9C2 /* Task.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		55AB8A85183493B600CDA9C2 /* toDoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "toDoTests-Info.plist"; sourceTree = "<group>"; };
 		55AB8A87183493B600CDA9C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		55AB8A89183493B600CDA9C2 /* toDoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = toDoTests.m; sourceTree = "<group>"; };
+		55AB8A931834A48400CDA9C2 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		55AB8A941834A48400CDA9C2 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 				55AB8A74183493B600CDA9C2 /* ViewController.m */,
 				55AB8A76183493B600CDA9C2 /* Images.xcassets */,
 				55AB8A65183493B600CDA9C2 /* Supporting Files */,
+				55AB8A931834A48400CDA9C2 /* Task.h */,
+				55AB8A941834A48400CDA9C2 /* Task.m */,
 			);
 			path = toDo;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55AB8A951834A48400CDA9C2 /* Task.m in Sources */,
 				55AB8A75183493B600CDA9C2 /* ViewController.m in Sources */,
 				55AB8A6F183493B600CDA9C2 /* AppDelegate.m in Sources */,
 				55AB8A6B183493B600CDA9C2 /* main.m in Sources */,
