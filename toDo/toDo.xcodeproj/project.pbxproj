@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551638C818362705003FD057 /* EditTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 551638C718362705003FD057 /* EditTaskViewController.m */; };
 		55AB8A5F183493B600CDA9C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AB8A5E183493B600CDA9C2 /* Foundation.framework */; };
 		55AB8A61183493B600CDA9C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AB8A60183493B600CDA9C2 /* CoreGraphics.framework */; };
 		55AB8A63183493B600CDA9C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55AB8A62183493B600CDA9C2 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		551638C618362705003FD057 /* EditTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTaskViewController.h; sourceTree = "<group>"; };
+		551638C718362705003FD057 /* EditTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTaskViewController.m; sourceTree = "<group>"; };
 		55AB8A5B183493B600CDA9C2 /* toDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = toDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55AB8A5E183493B600CDA9C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		55AB8A60183493B600CDA9C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +137,8 @@
 				55AB8A971834A90E00CDA9C2 /* TaskListViewController.m */,
 				55AB8A991834BBA900CDA9C2 /* AddTaskViewController.h */,
 				55AB8A9A1834BBA900CDA9C2 /* AddTaskViewController.m */,
+				551638C618362705003FD057 /* EditTaskViewController.h */,
+				551638C718362705003FD057 /* EditTaskViewController.m */,
 			);
 			path = toDo;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 				55AB8A9B1834BBA900CDA9C2 /* AddTaskViewController.m in Sources */,
 				55AB8A75183493B600CDA9C2 /* ViewController.m in Sources */,
 				55AB8A6F183493B600CDA9C2 /* AppDelegate.m in Sources */,
+				551638C818362705003FD057 /* EditTaskViewController.m in Sources */,
 				55AB8A981834A90E00CDA9C2 /* TaskListViewController.m in Sources */,
 				55AB8A6B183493B600CDA9C2 /* main.m in Sources */,
 			);
@@ -478,6 +484,7 @@
 				55AB8A8F183493B600CDA9C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		55AB8A90183493B600CDA9C2 /* Build configuration list for PBXNativeTarget "toDoTests" */ = {
 			isa = XCConfigurationList;
@@ -486,6 +493,7 @@
 				55AB8A92183493B600CDA9C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
