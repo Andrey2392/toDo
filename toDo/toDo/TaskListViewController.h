@@ -12,4 +12,6 @@
 
 @property (nonatomic,strong) NSMutableArray *tasks;
 
+-(IBAction)editButtonPressed:(id)sender;
+
 @end

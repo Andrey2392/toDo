@@ -30,7 +30,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Ftl-ID-W3O" kind="push" id="0bN-ZC-F8b"/>
+                                    <segue destination="Ftl-ID-W3O" kind="push" identifier="EditNotDoneTaskSegue" id="0bN-ZC-F8b"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="notDoneTaskCell" textLabel="LId-tk-v3g" style="IBUITableViewCellStyleDefault" id="sjw-9p-6jq">
@@ -50,7 +50,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Ftl-ID-W3O" kind="push" id="mrs-HF-lpx"/>
+                                    <segue destination="Ftl-ID-W3O" kind="push" identifier="EditDoneTaskSegue" id="mrs-HF-lpx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -61,6 +61,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Заметки" id="GUI-pm-jQW">
+                        <barButtonItem key="leftBarButtonItem" title="изменить" id="jGe-Hw-mND">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="go7-nz-Pjb" id="0aH-M6-PFu"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="UMf-XN-Xh1">
                             <connections>
                                 <segue destination="IqZ-uu-ZFm" kind="modal" identifier="AddTaskSegue" id="cfK-fV-Aw0"/>
@@ -72,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="708" y="49"/>
         </scene>
-        <!--Table View Controller - Редактор заметок-->
+        <!--Edit Task View Controller - Редактор заметок-->
         <scene sceneID="lSh-Wa-it5">
             <objects>
-                <tableViewController id="Ftl-ID-W3O" sceneMemberID="viewController">
+                <tableViewController id="Ftl-ID-W3O" customClass="EditTaskViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="24c-Kh-TCs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,6 +100,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="taskDataChange:" destination="Ftl-ID-W3O" eventType="editingChanged" id="qxM-ra-OND"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -122,6 +130,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="onTintColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="thumbTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <connections>
+                                                        <action selector="taskDataChange:" destination="Ftl-ID-W3O" eventType="valueChanged" id="gtF-NM-P1z"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -134,7 +145,13 @@
                             <outlet property="delegate" destination="Ftl-ID-W3O" id="BS2-CV-7OU"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Редактор заметок" id="Fvk-u7-mO2"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="doneSwitch" destination="Ivf-jc-Leb" id="Cd6-KC-ZTt"/>
+                        <outlet property="nameField" destination="Jmq-yd-kTf" id="G1L-cw-Gzw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jD-S6-FyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

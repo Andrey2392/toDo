@@ -53,6 +53,5 @@
     Task *newTask=[[Task alloc]initWithName:self.nameField.text done:NO];
     [self.taskListViewController.tasks addObject:newTask];
     [self dismissModalViewControllerAnimated:YES];
-    [self.taskListViewController.tableView reloadData];
 }
 @end
